@@ -12,7 +12,7 @@ return {
 	
    logging = {
             level = domoticz.LOG_ERROR, -- LOG_DEBUG or LOG_ERROR
-            marker = "PANA-Totaal: "
+            marker = "Usage-new-Total: "
         },
 	
 	execute = function(domoticz, item)
