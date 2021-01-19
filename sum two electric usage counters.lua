@@ -1,3 +1,9 @@
+-- Script to sum two electric usage counters in one usage counter
+-- Create dummy device in Hardware
+-- Add new virtual sensor from dummy device 
+-- Choose: Electric (actual + counter)
+-- Write down Idx of this new virtual sensor and the IDX of the two existing counters you want to combine
+
 return {
 
 	on = {
@@ -11,13 +17,13 @@ return {
 	
 	execute = function(domoticz, item)
 	    
-	    local PanaVerbruikS1 = domoticz.devices(143)        -- Pana verbruikS1
-	    local PanaBackupS2 = domoticz.devices(144)          -- Pana backupheaterS2
-	    local PanaTotaal = domoticz.devices(145)            -- Pana totaal verbruik
+	    local UsageS1 = domoticz.devices(143)        -- Usage counter 1
+	    local UsageS2 = domoticz.devices(144)          -- Usage counter 2
+	    local Usage-New-Total = domoticz.devices(145)            -- New Virtual sensor: electric
 	    
-	    PanaTotaal.updateElectricity(
-            	PanaVerbruikS1.WhActual + PanaBackupS2.WhActual,
-            	PanaVerbruikS1.WhTotal + PanaBackupS2.WhTotal
+	    Usage-New-Total.updateElectricity(
+            	UsageS1.WhActual + UsageS2.WhActual,
+            	Usage.WhTotal + UsageS2.WhTotal
             )
 	    
 	end
