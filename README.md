@@ -1,2 +1,2 @@
 # Sum-Electric-Usage-Counters-Domoticz
-Simple script to combine two Electric Usage counters to one dummy counter.
+Simple Domoticz DzVents script to combine two Electric Usage counters to one dummy counter.
